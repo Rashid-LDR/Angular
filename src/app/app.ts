@@ -1,12 +1,13 @@
 import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { Home } from './Component/home/home';
-import { Index } from './index';
+import { HomeComopnent } from "./Component/home-comopnent/home-comopnent";
+import { Greeding } from './Component/greeding/greeding';
+
 
 @Component({
   selector: 'app-root',
-  imports: [Home,Index],
-  template: `<app-home/> <app-index/>`,
+  imports: [HomeComopnent,Greeding],
+  template: `<app-home-comopnent/> <app-greeding/> `,
   styleUrl: './app.css'
 })
 export class App {
