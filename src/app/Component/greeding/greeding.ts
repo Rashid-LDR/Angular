@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 
 @Component({
   selector: 'app-greeding',
@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrl: './greeding.css',
 })
 export class Greeding {
-
+  title=input()
+  keyUpHandler(event:KeyboardEvent){
+    console.log("Event Key Is Pressed",event.key)
+  }
 }
