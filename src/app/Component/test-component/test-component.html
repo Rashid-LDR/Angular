@@ -1,3 +1,31 @@
-@for(item of testitems(); track item) {
+<!-- @for(item of testitems(); track item) {
   <p>{{item.id}}-{{item.userId}} - {{item.title}} -{{item.completed}}</p>
-}
+} -->
+
+<div class="container">
+  <h2 class="heading">📋 Task List</h2>
+
+  <div class="card-grid">
+    @for(item of testitems(); track item.id) {
+      
+      <div class="card">
+        
+        <div class="card-header">
+          <span class="id">#{{item.id}}</span>
+          <span class="status" 
+                [class.completed]="item.completed"
+                [class.pending]="!item.completed">
+            {{ item.completed ? '✔ Completed' : '⏳ Pending' }}
+          </span>
+        </div>
+
+        <div class="card-body">
+          <h3>{{item.title}}</h3>
+          <p>User ID: {{item.userId}}</p>
+        </div>
+
+      </div>
+
+    }
+  </div>
+</div>

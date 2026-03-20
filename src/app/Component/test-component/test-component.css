@@ -1,0 +1,65 @@
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  min-height: 100vh;
+}
+
+.heading {
+  text-align: center;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 15px;
+  padding: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.id {
+  font-weight: bold;
+  color: #555;
+}
+
+.status {
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 20px;
+  color: white;
+}
+
+.completed {
+  background: #28a745;
+}
+
+.pending {
+  background: #dc3545;
+}
+
+.card-body h3 {
+  margin: 10px 0;
+  color: #333;
+}
+
+.card-body p {
+  color: #777;
+}
