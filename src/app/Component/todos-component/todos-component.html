@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>📝 Todo List</h1>
+
+  <div class="todo-card" *ngFor="let todo of Todoitems()">
+    <div class="todo-left">
+      <input type="checkbox" [checked]="todo.completed" />
+      <span [class.completed]="todo.completed">
+        {{ todo.title }}
+      </span>
+    </div>
+
+    <div class="todo-right">
+      <span class="user">User: {{ todo.userId }}</span>
+    </div>
+  </div>
+</div>

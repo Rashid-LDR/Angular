@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
 @Component({
@@ -8,5 +8,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './header-component.css',
 })
 export class HeaderComponent {
-
+    Title=signal("Tech-Nolgi")
+    todos=signal('Todos')
+    counter=signal('Counter')
+    test=signal('Test')
 }
