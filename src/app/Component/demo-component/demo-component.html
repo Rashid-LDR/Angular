@@ -1,1 +1,36 @@
-<p>demo-component works!</p>
+<!-- @for(demoitem of demoitems(); track demoitem){
+  <div class="demo-item">
+    <h3>{{demoitem.userId}}</h3>
+    <p>{{demoitem.id}}</p>
+    <p>{{demoitem.title}}</p>
+    <p>{{demoitem.completed}}</p>
+  </div>
+} -->
+
+<div class="page">
+  <h2 class="title">✨ Demo Items Dashboard</h2>
+
+  <div class="grid">
+    @for(demoitem of demoitems(); track demoitem.id) {
+
+      <div class="card">
+
+        <div class="top">
+          <span class="userid">User #{{demoitem.userId}}</span>
+          <span class="badge"
+                [class.done]="demoitem.completed"
+                [class.pending]="!demoitem.completed">
+            {{ demoitem.completed ? 'Completed' : 'Pending' }}
+          </span>
+        </div>
+
+        <div class="content">
+          <h3>{{demoitem.title}}</h3>
+          <p>ID: {{demoitem.id}}</p>
+        </div>
+
+      </div>
+
+    }
+  </div>
+</div>

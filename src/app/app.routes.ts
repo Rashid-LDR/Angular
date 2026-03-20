@@ -22,12 +22,19 @@ export const routes: Routes = [
             return import('./Component/counter/counter').then((m)=>m.Counter)
         },
     }
-        ,   
+    ,   
    {
         path:"test",
         loadComponent:()=> {
             return import('./Component/test-component/test-component').then((m)=>m.TestComponent)
         },
     }
+    ,   
+   {
+        path:"demo",
+        loadComponent:()=> {
+            return import('./Component/demo-component/demo-component').then((m)=>m.DemoComponent)
+        },
+   }
 
 ];

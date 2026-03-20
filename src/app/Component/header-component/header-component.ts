@@ -12,4 +12,5 @@ export class HeaderComponent {
     todos=signal('Todos')
     counter=signal('Counter')
     test=signal('Test')
+    demo=signal('Demo')
 }

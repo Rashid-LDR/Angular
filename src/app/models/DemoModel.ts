@@ -1,6 +1,6 @@
 export type DemoModel = {
     id: number;
-    name: string;   
+    title: string;   
     userId:number;
     completed:boolean;
   };
